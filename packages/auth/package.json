@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "@next-auth/prisma-adapter": "^1.0.6",
+    "db": "workspace:*",
+    "env": "workspace:*",
+    "next": "^13.4.1",
+    "next-auth": "^4.22.1",
+    "react-hook-form": "^7.43.9",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    },
+    "./client": {
+      "import": "./client.ts",
+      "types": "./client.ts"
+    }
+  },
+  "license": "MIT",
+  "main": "./index.ts",
+  "name": "auth",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "types": "./index.ts",
+  "version": "0.0.1"
+}

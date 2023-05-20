@@ -1,13 +1,17 @@
 import { defineConfig, Options } from "tsup";
 
 export default defineConfig((options: Options) => ({
-  treeshake: true,
+  // treeshake: true,
   splitting: true,
-  entry: ["src/**/*.tsx"],
+  entry: ["src/index.tsx"],
   format: ["esm"],
   dts: true,
   minify: true,
   clean: true,
   external: ["react"],
-  ...options,
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
+  },
 }));
